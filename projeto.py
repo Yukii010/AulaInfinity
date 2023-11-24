@@ -1,7 +1,6 @@
 import random
 
 def obter_escolha_usuario():
-    """Obtém a escolha do usuário."""
     escolha = input("Escolha pedra, papel ou tesoura: ").lower()
     while escolha not in ["pedra", "papel", "tesoura"]:
         print("Escolha inválida. Tente novamente.")
@@ -9,12 +8,10 @@ def obter_escolha_usuario():
     return escolha
 
 def obter_escolha_computador():
-    """Obtém a escolha aleatória do computador."""
     opcoes = ["pedra", "papel", "tesoura"]
     return random.choice(opcoes)
 
 def determinar_vencedor(escolha_usuario, escolha_computador):
-    """Determina o vencedor do jogo."""
     if escolha_usuario == escolha_computador:
         return "Empate!"
     elif (
@@ -27,7 +24,6 @@ def determinar_vencedor(escolha_usuario, escolha_computador):
         return "O computador venceu!"
 
 def jogar():
-    """Função principal para executar o jogo."""
     escolha_usuario = obter_escolha_usuario()
     escolha_computador = obter_escolha_computador()
 
